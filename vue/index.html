@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- <base href="http://www.baidu.com"> -->
+	<style>
+        /* body{
+            background: yellow;
+        } */
+        .class1{
+            color: red;
+            background: #ccc;
+        }
+        #app p:nth-child(odd){
+            background: yellow;
+        }
+        span{
+            color: blue;
+        }
+        :not(.span){
+            color: red;
+        }
+        .h1{
+            position:-webkit-sticky;
+            position:-moz-sticky;
+            position:-ms-sticky;
+            position: sticky;
+            top: 50px;
+        }
+        h2{
+            position:-webkit-sticky;
+            position:-moz-sticky;
+            position:-ms-sticky;
+            position: sticky;
+            bottom: 50px;
+        }
+	</style>
+</head>
+<body>
+    <div id="app">
+        <iframe src="index2.html"></iframe>
+        <a href="index3.html">´ò¿ª¸¸´°¿Ú</a>
+        <p>asdsa</p>
+        <p>asdsa</p>
+        <p>asdsa</p>
+        <h1 class='h1'>header</h1>
+        <span class='span'>span: hello</span><br/>
+        <input type="checkbox" name="site" value='baidu'>baidu
+        <input type="checkbox" name="site" value='google'>google
+        <input type="checkbox" name="site" value='facebook'>facebook
+        <img src="src/images/1.png" width="400px;">
+        <!-- <img src="src/images/1.png">
+        <img src="src/images/1.png">
+        <img src="src/images/1.png"> -->
+        <h2>h2asdasdsadasdsadasdsa</h2>
+    </div>
+    <section class="content">
+        <h2 class="content__title">_001</h2>
+        <div class="grid grid--effect-vega">
+            <a href="#" class="grid__item grid__item--c1">
+                <div class="stack">
+                    <div class="stack__deco"></div>
+                    <div class="stack__deco"></div>
+                    <div class="stack__deco"></div>
+                    <div class="stack__deco"></div>
+                    <div class="stack__figure">
+                        <img class="stack__img" src="src/images/1.png" alt="Image">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="grid__item grid__item--c1">
+                <div class="stack">
+                    <div class="stack__deco"></div>
+                    <div class="stack__deco"></div>
+                    <div class="stack__deco"></div>
+                    <div class="stack__deco"></div>
+                    <div class="stack__figure">
+                        <img class="stack__img" src="src/images/1.png" alt="Image">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>   
+<script src="js/anime.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function() {
+    [].slice.call(document.querySelectorAll('.grid--effect-vega > .grid__item')).forEach(function(stackEl) {
+        new VegaFx(stackEl);
+    });
+    
+})();
+    var app=new Vue({
+        data:{
+            message:'linshenghui',
+            c1:true,
+            class1:'class1',
+            style1:{
+                color:'blue',
+            }
+        },
+        methods:{
+            doSomething: function(){
+                alert('you press the up')
+            },
+            blurEvent: function(){
+                alert('blur')
+            }
+        }
+   })
+
+</script>
+</body>
+
+</html>
